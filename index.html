@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.rtl.min.css"
+        integrity="sha512-4W9f7EnJgM33kD11Ux2XNF9DSpJ7LoQXCvBNhzKTorRSyjPHmjXhHMZMafIYqYvTNWahUk2ulNsarMMLDEv4zA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div id="fd1" class="col-12">
+        <h1>Fixed deposite calculator</h1>
+    </div>
+    <div class="row">
+        <div id="form" class="container-fluid">
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="text" class="form-control" id="amount" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="tenure" class="form-label">Tenure</label>
+                    <input type="text" class="form-control" id="tenure" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <button onclick="check()" type="button">Calculate</button>
+                    <button id="reset">Reset</button>
+                </div>
+
+            </form>
+        </div>
+        <div>
+            <h2 id="h2">welcome</h2>
+        </div>
+
+    </div>
+    <script>
+        function check() {
+            var name = ''; var age = 0;
+            var amount = 0; var tenure = 0;
+            var intrest_rate = 0; var total = 0;
+            var intrest = 0;
+            age = document.getElementById("age").value
+            amount = document.getElementById("amount").value
+            tenure = document.getElementById("tenure").value
+            name = document.getElementById("name").value
+            console.log(age)
+            console.log(amount)
+            console.log(tenure)
+            console.log(name)
+            if (age > 60) {
+                intrest_rate = 8;
+            }
+            else if (age < 60 && age > 40) {
+                intrest_rate = 7;
+            }
+            else if (age < 40) {
+                intrest_rate = 6;
+            }
+            console.log(intrest_rate)
+            intrest = (amount * tenure * intrest_rate) / 100
+            console.log(intrest)
+            if (intrest > 100000) {
+                intrest = intrest - (intrest * 2 / 100)
+            }
+            console.log(intrest)
+            total = Number(amount) + Number(intrest)
+            document.getElementById("h2").innerHTML = `Hey ${name},total meturity value is ${total}`;
+
+
+
+        }
+    </script>
+</body>
+
+</html>
