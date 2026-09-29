@@ -7,20 +7,33 @@ body {
     display: flex;
     justify-content: center;
 }
-#form{
-    display:flex;
-    justify-content:start;
+
+#form {
+    display: flex;
+    justify-content: start;
 }
-div{
-    padding:5px 0px 0px 20px;
+
+div {
+    padding: 5px 0px 0px 20px;
 }
-button{
-    padding:5px;
-    margin:10px;
-    background-color:royalblue;
+
+#button {
+    padding: 5px;
+    margin: 10px;
+    background-color: royalblue;
+    border: 2px solid black;
+    border-radius:10px;
 }
-#reset{
-    padding:5px 20px 5px 20px;
-    margin-left:40px;
-    background-color:indianred;
+
+#reset {
+    padding: 5px 20px 5px 20px;
+    margin-left: 40px;
+    background-color: indianred;
+    border: 2px solid black;
+    border-radius:10px;
+}
+
+#h2 {
+    color: yellow;
+    padding-top: 20px;
 }

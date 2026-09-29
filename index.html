@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="fd.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.rtl.min.css"
         integrity="sha512-4W9f7EnJgM33kD11Ux2XNF9DSpJ7LoQXCvBNhzKTorRSyjPHmjXhHMZMafIYqYvTNWahUk2ulNsarMMLDEv4zA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -20,7 +20,7 @@
             <form>
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
                     <label for="age" class="form-label">Age</label>
@@ -35,14 +35,14 @@
                     <input type="text" class="form-control" id="tenure" aria-describedby="emailHelp">
                 </div>
                 <div>
-                    <button onclick="check()" type="button">Calculate</button>
+                    <button id="button" onclick="check()" type="button">Calculate</button>
                     <button id="reset">Reset</button>
                 </div>
 
             </form>
         </div>
         <div>
-            <h2 id="h2">welcome</h2>
+            <h2 id="h2" class=col-md-4>welcome</h2>
         </div>
 
     </div>
